@@ -1,6 +1,18 @@
 import Header from "./components/Header/Header";
+import {useEffect, useState} from "react";
 
 function App() {
+  const [theme, setTheme] = useState('dark');
+
+  useEffect(() => {
+    if (localStorage.getItem('theme') !== null) {
+      setTheme(localStorage.getItem('theme'));
+      document.body.dataset.bsTheme = String(localStorage.getItem('theme'));
+    } else {
+      localStorage.setItem('theme', theme);
+    }
+
+  }, [])
 
   return (
     <>
