@@ -1,12 +1,10 @@
+import Header from "./components/Header/Header";
+
 function App() {
 
   return (
     <>
-      <div className="container-fluid bg-warning">
-        <header>
-          Nav
-        </header>
-      </div>
+      <Header />
 
       <main className="container-fluid">
         <div className="row">
