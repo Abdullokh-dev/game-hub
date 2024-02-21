@@ -1,4 +1,5 @@
 import Header from "./components/Header/Header";
+import Game from "./components/Game/Game";
 
 function App() {
   return (
@@ -8,12 +9,12 @@ function App() {
 
         <main>
           <div className="row">
-            <div className="d-none d-xl-block col-12 col-xl-6 bg-success">
+            <div className="d-none d-xl-block col-12 col-xl-6">
               <aside>Aside</aside>
             </div>
 
-            <div className="col-12 col-xl-6 bg-secondary">
-              Main
+            <div className="col-12 col-xl-6">
+              <Game />
             </div>
           </div>
         </main>
