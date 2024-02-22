@@ -1,5 +1,5 @@
 import Header from "./components/Header/Header";
-import Game from "./components/Game/Game";
+import Games from "./components/Games/Games";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
             </div>
 
             <div className="col-12 col-xl-6">
-              <Game />
+              <Games />
             </div>
           </div>
         </main>
