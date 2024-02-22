@@ -1,4 +1,6 @@
 import {Game} from "../hooks/useGames";
+import PlatformIconList from "./PlatformIconList";
+import './GameCard.css'
 
 interface Props {
   game: Game,
@@ -11,6 +13,7 @@ function GameCard({ game }: Props) {
         <img src={game.background_image} className="card-img-top" alt="..." />
         <div className="card-body">
           <h3 className="card-title fs-5">{game.name}</h3>
+          <PlatformIconList platforms={game.parent_platforms.map(p => p.platform)} />
         </div>
       </div>
     </div>

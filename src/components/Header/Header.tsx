@@ -1,6 +1,6 @@
 import logo from '../../assets/logo.png';
 import './Header.css';
-import ColorModeSwitch from "../ColorModeSwitch";
+import ColorModeSwitch from "./ColorModeSwitch";
 
 function Header() {
   return (
