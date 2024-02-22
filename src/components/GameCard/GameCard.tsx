@@ -1,6 +1,7 @@
 import {Game} from "../hooks/useGames";
 import PlatformIconList from "./PlatformIconList";
 import './GameCard.css'
+import CriticScore from "./CriticScore";
 
 interface Props {
   game: Game,
@@ -13,7 +14,10 @@ function GameCard({ game }: Props) {
         <img src={game.background_image} className="card-img-top" alt="..." />
         <div className="card-body">
           <h3 className="card-title fs-5">{game.name}</h3>
-          <PlatformIconList platforms={game.parent_platforms.map(p => p.platform)} />
+          <div className="d-flex justify-content-between align-items-center">
+            <PlatformIconList platforms={game.parent_platforms.map(p => p.platform)} />
+            <CriticScore score={game.metacritic} />
+          </div>
         </div>
       </div>
     </div>

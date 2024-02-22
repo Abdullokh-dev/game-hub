@@ -6,3 +6,8 @@
 .platform-icon {
     color: #718096;
 }
+
+.badge {
+    font-size: 14px;
+    line-height: normal;
+}
