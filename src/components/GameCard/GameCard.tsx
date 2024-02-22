@@ -1,4 +1,4 @@
-import {Game} from "../hooks/useGames";
+import {Game} from "../../hooks/useGames";
 import PlatformIconList from "./PlatformIconList";
 import './GameCard.css'
 import CriticScore from "./CriticScore";

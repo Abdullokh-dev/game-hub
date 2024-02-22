@@ -1,5 +1,5 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import {Platform} from "../hooks/useGames";
+import {Platform} from "../../hooks/useGames";
 
 interface Props {
   platforms: Platform[]
