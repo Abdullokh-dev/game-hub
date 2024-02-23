@@ -1,9 +1,14 @@
 import useGames from "../../hooks/useGames";
 import GameCard from "../GameCard/GameCard";
 import GameCardSkeleton from "../GameCard/GameCardSkeleton";
+import {Genre} from "../../hooks/useGenres";
 
-function Games() {
-  const { data, error, isLoading } = useGames();
+interface Props {
+  selectedGenre: Genre | null
+}
+
+function Games( {selectedGenre}: Props ) {
+  const { data, error, isLoading } = useGames(selectedGenre);
   const skeletons = [1, 2, 3, 4, 5, 6];
   return (
     <>

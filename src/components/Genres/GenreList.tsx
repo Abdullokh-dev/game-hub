@@ -1,8 +1,12 @@
-import useGenres from "../../hooks/useGenres";
+import useGenres, {Genre} from "../../hooks/useGenres";
 import getCroppedImageUrl from "../../services/image-url";
 import "./Genres.css";
 
-function GenreList() {
+interface Props {
+  onSelectGenre: (genre: Genre) => void;
+}
+
+function GenreList({onSelectGenre}: Props) {
   const { data, isLoading, error } = useGenres();
   if (error.length) return null;
 
@@ -14,7 +18,7 @@ function GenreList() {
         {data.map(genre =>
           <li key={genre.id}>
             <img className="genre-img" src={getCroppedImageUrl(genre.image_background)} alt={genre.name}/>
-            <span className="fs-6">{genre.name}</span>
+            <button onClick={() => onSelectGenre(genre)} className="fs-6 btn-link p-0">{genre.name}</button>
           </li>
         )}
       </ul>

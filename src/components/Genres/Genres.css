@@ -16,3 +16,13 @@
     object-fit: cover;
     margin-right: 8px;
 }
+
+.btn-link {
+    background: transparent;
+    border: 0;
+    text-decoration: none !important;
+}
+
+.btn-link:hover {
+    text-decoration: underline !important;
+}

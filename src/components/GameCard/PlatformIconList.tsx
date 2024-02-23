@@ -21,7 +21,7 @@ const PlatformIconList = ({ platforms }: Props) => {
   return (
     <div className="d-flex gap-2">
       { platforms.map((platform) =>
-        <i key={platform.slug} className={"platform-icon bi bi-"+ iconMap[platform.slug]} />
+        <i key={platform.id} className={"platform-icon bi bi-"+ iconMap[platform.slug]} />
       ) }
     </div>
   )
