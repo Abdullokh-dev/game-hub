@@ -2,3 +2,7 @@
 [data-theme=light] {}
 
 [data-theme=dark] {}
+
+.aside-column {
+    max-width: 220px !important;
+}

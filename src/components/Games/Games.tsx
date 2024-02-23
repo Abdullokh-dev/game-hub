@@ -7,7 +7,7 @@ function Games() {
   const skeletons = [1, 2, 3, 4, 5, 6];
   return (
     <>
-      {error && <p className="text-danger">{error}</p>}
+      {error && <p className="text-danger m-0">{error}</p>}
       <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4">
         {isLoading && skeletons.map(skeleton => <GameCardSkeleton key={skeleton} />)}
         {data.map((game) => (

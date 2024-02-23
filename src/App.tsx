@@ -1,22 +1,23 @@
 import Header from "./components/Header/Header";
 import Games from "./components/Games/Games";
-import GenreList from "./components/GenreList";
+import GenreList from "./components/Genres/GenreList";
+import "./index.css";
 
 function App() {
   return (
     <>
-      <div className="container-fluid">
+      <div className="container-fluid px-3 px-md-4">
         <Header />
 
         <main>
           <div className="row">
-            <div className="d-none d-xl-block col-12 col-xl-3 col-xxl-2">
+            <div className="col d-none d-xl-block aside-column">
               <aside>
                 <GenreList />
               </aside>
             </div>
 
-            <div className="col-12 col-xl-9 col-xxl-10">
+            <div className="col">
               <Games />
             </div>
           </div>
