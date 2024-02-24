@@ -4,9 +4,10 @@ import "./Genres.css";
 
 interface Props {
   onSelectGenre: (genre: Genre) => void;
+  selectedGenre: Genre | null;
 }
 
-function GenreList({onSelectGenre}: Props) {
+function GenreList({selectedGenre, onSelectGenre}: Props) {
   const { data, isLoading, error } = useGenres();
   if (error.length) return null;
 
@@ -18,7 +19,7 @@ function GenreList({onSelectGenre}: Props) {
         {data.map(genre =>
           <li key={genre.id}>
             <img className="genre-img" src={getCroppedImageUrl(genre.image_background)} alt={genre.name}/>
-            <button onClick={() => onSelectGenre(genre)} className="fs-6 btn-link p-0">{genre.name}</button>
+            <button onClick={() => onSelectGenre(genre)} className={genre.id === selectedGenre?.id ? 'fs-6 btn-link p-0 fw-bold' : 'fs-6 btn-link p-0 fw-light'}>{genre.name}</button>
           </li>
         )}
       </ul>

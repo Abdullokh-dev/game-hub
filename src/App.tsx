@@ -17,7 +17,7 @@ function App() {
           <div className="row">
             <div className="col d-none d-xl-block aside-column">
               <aside>
-                <GenreList onSelectGenre={(genre) => setSelectedGenre(genre)}/>
+                <GenreList selectedGenre={selectedGenre} onSelectGenre={(genre) => setSelectedGenre(genre)} />
               </aside>
             </div>
 
