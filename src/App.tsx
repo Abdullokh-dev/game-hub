@@ -4,6 +4,7 @@ import GenreList from "./components/Genres/GenreList";
 import "./index.css";
 import {useState} from "react";
 import {Genre} from "./hooks/useGenres";
+import PlatformSelector from "./components/PlatformSelector";
 
 function App() {
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
@@ -22,6 +23,7 @@ function App() {
             </div>
 
             <div className="col">
+              <PlatformSelector />
               <Games selectedGenre={selectedGenre}/>
             </div>
           </div>
