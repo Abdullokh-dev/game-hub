@@ -11,6 +11,7 @@ import SortSelector from "./components/SortSelector/SortSelector";
 export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
+  sortOrder: string
 }
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
             <div className="col">
               <div className="d-flex gap-4">
                 <PlatformSelector selectedPlatform={gameQuery.platform} onSelectPlatform={platform => setGameQuery({...gameQuery, platform})}/>
-                <SortSelector />
+                <SortSelector sortOrder={gameQuery.sortOrder} onSelectSortOrder={(sortOrder) => setGameQuery({...gameQuery, sortOrder})}/>
               </div>
               <Games gameQuery={gameQuery} />
             </div>
