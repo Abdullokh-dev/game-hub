@@ -6,6 +6,7 @@ import {useState} from "react";
 import {Genre} from "./hooks/useGenres";
 import PlatformSelector from "./components/PlatformSelector";
 import {Platform} from "./hooks/useGames";
+import SortSelector from "./components/SortSelector/SortSelector";
 
 export interface GameQuery {
   genre: Genre | null;
@@ -29,7 +30,10 @@ function App() {
             </div>
 
             <div className="col">
-              <PlatformSelector selectedPlatform={gameQuery.platform} onSelectPlatform={platform => setGameQuery({...gameQuery, platform})}/>
+              <div className="d-flex gap-4">
+                <PlatformSelector selectedPlatform={gameQuery.platform} onSelectPlatform={platform => setGameQuery({...gameQuery, platform})}/>
+                <SortSelector />
+              </div>
               <Games gameQuery={gameQuery} />
             </div>
           </div>
