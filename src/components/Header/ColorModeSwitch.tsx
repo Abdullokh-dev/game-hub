@@ -24,7 +24,7 @@ function ColorModeSwitch() {
     <>
     <div className="form-check form-switch">
       <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked={theme === 'dark'} onChange={toggleTheme}/>
-      <label className="form-check-label" htmlFor="flexSwitchCheckChecked">Dark Mode</label>
+      <label className="form-check-label text-nowrap" htmlFor="flexSwitchCheckChecked">Dark Mode</label>
     </div>
     </>
   )
