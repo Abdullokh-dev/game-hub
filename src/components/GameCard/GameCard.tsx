@@ -13,7 +13,7 @@ function GameCard({ game }: Props) {
     <div className="col d-flex flex-column mb-4">
       <div className="card rounded-3 overflow-hidden h-100">
         <img src={getCroppedImageUrl(game.background_image)} className="card-img-top" alt="..." />
-        <div className="card-body">
+        <div className="card-body d-flex flex-column justify-content-between">
           <h3 className="card-title fs-5">{game.name}</h3>
           <div className="d-flex justify-content-between align-items-center">
             <PlatformIconList platforms={game.parent_platforms.map(p => p.platform)} />

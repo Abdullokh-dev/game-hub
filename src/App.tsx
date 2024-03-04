@@ -27,6 +27,7 @@ function App() {
         <main>
           <div className="row">
             <div className="col d-none d-xl-block aside-column">
+              <h5 className="mb-2">Genres</h5>
               <aside>
                 <GenreList selectedGenre={gameQuery.genre} onSelectGenre={(genre) => setGameQuery({...gameQuery, genre})} />
               </aside>
