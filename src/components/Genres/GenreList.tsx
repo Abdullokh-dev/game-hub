@@ -9,7 +9,7 @@ interface Props {
 
 function GenreList({selectedGenre, onSelectGenre}: Props) {
   const { data, isLoading, error } = useGenres();
-  if (error.length) return null;
+  if (error) return null;
 
   if (isLoading) return <div className="spinner-border" role="status"><span className="visually-hidden">Loading...</span></div>
 
