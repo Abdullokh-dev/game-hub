@@ -3,11 +3,15 @@ import './Header.css';
 import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "../SearchInput/SearchInput";
 
-function Header() {
+interface Props {
+  onSearch: (searchText: string) => void;
+}
+
+function Header({onSearch}: Props) {
   return (
     <header className="d-flex align-items-center py-3 py-md-4">
       <img src={logo} alt="#" className="logo" />
-      <SearchInput />
+      <SearchInput onSearch={(onSearch)}/>
       <ColorModeSwitch />
     </header>
   )

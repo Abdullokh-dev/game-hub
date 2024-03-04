@@ -11,7 +11,8 @@ import SortSelector from "./components/SortSelector/SortSelector";
 export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
-  sortOrder: string
+  sortOrder: string;
+  searchText: string;
 }
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
   return (
     <>
       <div className="container-fluid px-3 px-md-4">
-        <Header />
+        <Header onSearch={(searchText) => setGameQuery({...gameQuery, searchText})} />
 
         <main>
           <div className="row">
